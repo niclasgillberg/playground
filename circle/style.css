@@ -25,8 +25,8 @@ body {
   left: 0;
   background: #fff;
   border-radius: 100%;
-  -webkit-animation: travel 5s infinite ease-in-out;
-  animation: travel 5s infinite ease-in-out;
+  -webkit-animation: travel 5s infinite ease-in-out reverse;
+  animation: travel 5s infinite ease-in-out reverse;
 }
 .lane:nth-child(1) {
   transform: rotate(0deg);
@@ -35,43 +35,43 @@ body {
   -webkit-animation-delay: 0s;
 }
 .lane:nth-child(2) {
-  transform: rotate(22.5deg);
+  transform: rotate(-22.5deg);
 }
 .lane:nth-child(2) .dot {
   -webkit-animation-delay: 0.3125s;
 }
 .lane:nth-child(3) {
-  transform: rotate(45deg);
+  transform: rotate(-45deg);
 }
 .lane:nth-child(3) .dot {
   -webkit-animation-delay: 0.625s;
 }
 .lane:nth-child(4) {
-  transform: rotate(67.5deg);
+  transform: rotate(-67.5deg);
 }
 .lane:nth-child(4) .dot {
   -webkit-animation-delay: 0.9375s;
 }
 .lane:nth-child(5) {
-  transform: rotate(90deg);
+  transform: rotate(-90deg);
 }
 .lane:nth-child(5) .dot {
   -webkit-animation-delay: 1.25s;
 }
 .lane:nth-child(6) {
-  transform: rotate(112.5deg);
+  transform: rotate(-112.5deg);
 }
 .lane:nth-child(6) .dot {
   -webkit-animation-delay: 1.5625s;
 }
 .lane:nth-child(7) {
-  transform: rotate(135deg);
+  transform: rotate(-135deg);
 }
 .lane:nth-child(7) .dot {
   -webkit-animation-delay: 1.875s;
 }
 .lane:nth-child(8) {
-  transform: rotate(157.5deg);
+  transform: rotate(-157.5deg);
 }
 .lane:nth-child(8) .dot {
   -webkit-animation-delay: 2.1875s;

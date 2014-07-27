@@ -29,12 +29,12 @@ body
   left 0
   background #fff
   border-radius 100%
-  -webkit-animation travel transition-length infinite ease-in-out
-  animation travel transition-length infinite ease-in-out
+  -webkit-animation travel transition-length infinite ease-in-out reverse
+  animation travel transition-length infinite ease-in-out reverse
 
 for i in (1..8)
   .lane:nth-child({i})
-    transform rotate(((i - 1) * 22.5)deg)
+    transform rotate(-((i - 1) * 22.5)deg)
 
     .dot
       -webkit-animation-delay ((i - 1) * (transition-length / 16))
