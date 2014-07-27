@@ -8,4 +8,4 @@ This is where I put those little experimental exercises that I normally throws a
 Exercises
 ---------
 
-1. Circle (inspired by (this video)[https://www.youtube.com/watch?v=pNe6fsaCVtI]
+1. Circle (inspired by [this video](https://www.youtube.com/watch?v=pNe6fsaCVtI)
