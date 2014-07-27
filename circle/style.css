@@ -78,56 +78,56 @@ body {
 }
 @-webkit-keyframes travel {
   from {
-    left: 0;
+    transform: translate3d(0, 0, 0);
   }
   50% {
-    left: 750px;
+    transform: translate3d(750px, 0, 0);
   }
   to {
-    left: 0;
+    transform: translate3d(0, 0, 0);
   }
 }
 @-moz-keyframes travel {
   from {
-    left: 0;
+    transform: translate3d(0, 0, 0);
   }
   50% {
-    left: 750px;
+    transform: translate3d(750px, 0, 0);
   }
   to {
-    left: 0;
+    transform: translate3d(0, 0, 0);
   }
 }
 @-webkit-keyframes travel {
   from {
-    left: 0;
+    transform: translate3d(0, 0, 0);
   }
   50% {
-    left: 750px;
+    transform: translate3d(750px, 0, 0);
   }
   to {
-    left: 0;
+    transform: translate3d(0, 0, 0);
   }
 }
 @-o-keyframes travel {
   from {
-    left: 0;
+    transform: translate3d(0, 0, 0);
   }
   50% {
-    left: 750px;
+    transform: translate3d(750px, 0, 0);
   }
   to {
-    left: 0;
+    transform: translate3d(0, 0, 0);
   }
 }
 @keyframes travel {
   from {
-    left: 0;
+    transform: translate3d(0, 0, 0);
   }
   50% {
-    left: 750px;
+    transform: translate3d(750px, 0, 0);
   }
   to {
-    left: 0;
+    transform: translate3d(0, 0, 0);
   }
 }

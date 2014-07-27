@@ -41,20 +41,20 @@ for i in (1..8)
 
 @-webkit-keyframes travel
   from
-    left 0
+    transform translate3d(0, 0, 0)
 
   50%
-    left (circle-size - dot-size)
+    transform translate3d(circle-size - dot-size, 0, 0)
 
   to
-    left 0
+    transform translate3d(0, 0, 0)
 
 @keyframes travel
   from
-    left 0
+    transform translate3d(0, 0, 0)
 
   50%
-    left (circle-size - dot-size)
+    transform translate3d(circle-size - dot-size, 0, 0)
 
   to
-    left 0
+    transform translate3d(0, 0, 0)
