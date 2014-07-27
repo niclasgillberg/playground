@@ -1,0 +1,60 @@
+circle-size = 800px
+dot-size = 50px
+transition-length = 5s
+
+*
+  box-sizing border-box
+
+body
+  background #000
+
+.circle
+  width circle-size
+  height circle-size
+  background #f06d06
+  margin 50px auto
+  border-radius 100%
+  position relative
+
+.lane
+  width circle-size
+  position absolute
+  top 50%
+
+.dot
+  width dot-size
+  height dot-size
+  position absolute
+  top -(dot-size / 2)
+  left 0
+  background #fff
+  border-radius 100%
+  -webkit-animation travel transition-length infinite ease-in-out
+  animation travel transition-length infinite ease-in-out
+
+for i in (1..8)
+  .lane:nth-child({i})
+    transform rotate(((i - 1) * 22.5)deg)
+
+    .dot
+      -webkit-animation-delay ((i - 1) * (transition-length / 16))
+
+@-webkit-keyframes travel
+  from
+    left 0
+
+  50%
+    left (circle-size - dot-size)
+
+  to
+    left 0
+
+@keyframes travel
+  from
+    left 0
+
+  50%
+    left (circle-size - dot-size)
+
+  to
+    left 0
