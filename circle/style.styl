@@ -38,16 +38,7 @@ for i in (1..8)
 
     .dot
       -webkit-animation-delay ((i - 1) * (transition-length / 16))
-
-@-webkit-keyframes travel
-  from
-    transform translate3d(0, 0, 0)
-
-  50%
-    transform translate3d(circle-size - dot-size, 0, 0)
-
-  to
-    transform translate3d(0, 0, 0)
+      animation-delay ((i - 1) * (transition-length / 16))
 
 @keyframes travel
   from
