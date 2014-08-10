@@ -8,7 +8,7 @@
     <nav class="sidebar" ng-controller="SidebarCtrl as vm">
       <h1 class="title">Playground</h1>
       <category name="CSS">
-        <experiment name="Circle"></experiment>
+        <experiment name="Circle" path="experiments/css/circle"></experiment>
       </category>
     </nav>
 
@@ -40,7 +40,7 @@
 
     <script type="text/ng-template" id="experiment.html">
       <li class="experiment">
-        {{name}}
+        <a ng-href="{{path}}">{{name}}</a>
       </li>
     </script>
   </body>

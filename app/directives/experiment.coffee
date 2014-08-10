@@ -5,6 +5,7 @@ experiment = ->
   templateUrl: 'experiment.html'
   scope:
     name: '@'
+    path: '@'
 
 angular
   .module 'playground'
