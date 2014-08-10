@@ -1,0 +1,22 @@
+{
+  "name": "Playground",
+  "version": "0.0.0",
+  "description": "My little playground",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://niclassahlin@github.com/niclassahlin/playground.git"
+  },
+  "keywords": [
+    "Playground"
+  ],
+  "author": "Niclas Sahlin <niclas@niclassahlin.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/niclassahlin/playground/issues"
+  },
+  "homepage": "https://github.com/niclassahlin/playground"
+}

@@ -1,0 +1,22 @@
+{
+  "name": "Playground",
+  "version": "0.0.0",
+  "homepage": "https://github.com/niclassahlin/playground",
+  "authors": [
+    "Niclas Sahlin <niclas@niclassahlin.com>"
+  ],
+  "description": "My little playground",
+  "main": "index.html",
+  "keywords": [
+    "Playground"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
