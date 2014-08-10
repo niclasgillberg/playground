@@ -6,29 +6,43 @@
   </head>
   <body>
     <nav class="sidebar" ng-controller="SidebarCtrl as vm">
-      <h1 class="title">Playground</h1>
+      <h1 class="title">
+        <a ui-sref="home">Playground</a>
+      </h1>
       <category name="CSS">
-        <experiment name="Circle" path="experiments/css/circle"></experiment>
+        <experiment name="Circle" cat="css" id="circle"></experiment>
       </category>
     </nav>
 
+    <ui-view></ui-view>
 
-    <h1>My nifty little experiments</h1>
-    <p>I like to try new things and to challenge myself,
-      but sometimes that is hard to do in real projects.</p>
-
-    <p>This is where I put those little experimental exercises
-      that I normally throws away, but someone may find them interesting.</p>
-
-    <h2>Exercises</h2>
-
-    <ol>
-      <li>
-        <a href="circle">Circle</a> (inspired by <a href="https://www.youtube.com/watch?v=pNe6fsaCVtI">this video</a>)
-      </li>
-    </ol>
     <script src="vendor/angular/angular.min.js"></script>
+    <script src="vendor/angular-ui-router/release/angular-ui-router.min.js"></script>
     <script src="dist/application.js"></script>
+
+    <script type="text/ng-template" id="home.html">
+
+      <h1>My nifty little experiments</h1>
+      <p>I like to try new things and to challenge myself,
+        but sometimes that is hard to do in real projects.</p>
+
+      <p>This is where I put those little experimental exercises
+        that I normally throws away, but someone may find them interesting.</p>
+
+      <h2>Exercises</h2>
+
+      <ol>
+        <li>
+          <a href="circle">Circle</a> (inspired by <a href="https://www.youtube.com/watch?v=pNe6fsaCVtI">this video</a>)
+        </li>
+      </ol>
+    </script>
+
+    <script type="text/ng-template" id="experiment-view.html">
+      <div class="experiment-view-port">
+        <iframe src="{{vm.path}}" frameborder="0"></iframe>
+      </div>
+    </script>
 
     <script type="text/ng-template" id="category.html">
       <div class="category">
@@ -40,7 +54,7 @@
 
     <script type="text/ng-template" id="experiment.html">
       <li class="experiment">
-        <a ng-href="{{path}}">{{name}}</a>
+        <a ui-sref="experiment({category: cat, id: id})">{{name}}</a>
       </li>
     </script>
   </body>

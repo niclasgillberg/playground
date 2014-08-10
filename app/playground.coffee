@@ -1,1 +1,1 @@
-angular.module 'playground', []
+angular.module 'playground', ['ui.router']

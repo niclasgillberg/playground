@@ -16,8 +16,8 @@ task = (options) ->
       watch glob: options.watch, ->
         gulp.start options.name
 
-gulp.task 'default', ['application-styles:watch', 'application-scripts:watch']
-gulp.task 'build', ['application-styles', 'application-scripts']
+gulp.task 'default', ['application-styles:watch', 'application-scripts:watch', 'experiment-styles:watch']
+gulp.task 'build', ['application-styles', 'application-scripts', 'experiment-styles']
 
 
 task
@@ -42,3 +42,12 @@ task
         .pipe uglify()
         .pipe gulp.dest('dist')
 
+task
+  name: 'experiment-styles'
+  watch: 'experiments/**/*.styl'
+  task: ->
+    gulp.src 'experiments/**/*.styl'
+        .pipe plumber()
+        .pipe stylus()
+        .pipe autoprefixer()
+        .pipe gulp.dest 'experiments'
