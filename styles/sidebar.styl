@@ -1,0 +1,54 @@
+sidebar-width = 150px
+base-padding = 20px
+
+shadow-dark = hsla(0, 0, 0, 50%)
+shadow-light = hsla(0, 100%, 100%, 50%)
+
+*,
+*:before,
+*:after
+  box-sizing border-box
+
+body
+  padding-left sidebar-width + base-padding
+
+.sidebar
+  position absolute
+  width sidebar-width
+  top 0
+  left 0
+  bottom 0
+  background #9B9B9B
+  box-shadow 0 2px 5px shadow-dark, inset 0 0 2px shadow-light
+  border 1px solid #9B9B9B
+
+  .title
+    font-size 24px
+    text-align center
+    color #fff
+    text-shadow 0 2px 4px shadow-dark
+
+.category
+  .category-title
+    font-size 18px
+    width sidebar-width + base-padding
+    height 35px
+    line-height 35px
+    background #ccc
+    margin 0
+    margin-left -10px
+    padding-left 20px
+    border 1px solid #979797
+    box-shadow 0 2px 5px shadow-dark, inset 0 1px 3px shadow-dark, inset 0 4px 1px shadow-light
+    text-shadow 0 1px 2px shadow-light
+
+  .category-list
+    list-style-type: none
+    margin 0
+    padding 10px 0
+
+  .experiment
+    box-shadow 0 0 0 shadow-dark, 0 1px 1px shadow-light, inset 0 1px 1px shadow-light
+    padding-left 10px
+    height 35px
+    line-height 35px

@@ -1,15 +1,18 @@
-<html>
+<html ng-app="playground">
   <head>
     <title>My nifty little experiments</title>
+    <link rel="stylesheet" href="vendor/normalize.css/normalize.css"/>
     <link rel="stylesheet" href="dist/application.css"/>
   </head>
   <body>
-    <nav class="sidebar">
+    <nav class="sidebar" ng-controller="SidebarCtrl as vm">
       <h1 class="title">Playground</h1>
       <category name="CSS">
-        <experiment name="circle" />
+        <experiment name="Circle"></experiment>
       </category>
     </nav>
+
+
     <h1>My nifty little experiments</h1>
     <p>I like to try new things and to challenge myself,
       but sometimes that is hard to do in real projects.</p>
@@ -26,5 +29,19 @@
     </ol>
     <script src="vendor/angular/angular.min.js"></script>
     <script src="dist/application.js"></script>
+
+    <script type="text/ng-template" id="category.html">
+      <div class="category">
+        <h2 class="category-title">{{name}}</h2>
+        <ul class="category-list" ng-transclude="">
+        </ul>
+      </div>
+    </script>
+
+    <script type="text/ng-template" id="experiment.html">
+      <li class="experiment">
+        {{name}}
+      </li>
+    </script>
   </body>
 </html>

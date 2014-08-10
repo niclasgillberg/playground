@@ -1,5 +1,10 @@
-category =
+category = ->
   restrict: 'EA'
+  replace: true
+  templateUrl: 'category.html'
+  transclude: true
+  scope:
+    name: '@'
 
 
 angular
