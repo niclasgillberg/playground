@@ -2,6 +2,7 @@ bg-color = #fff
 small-size = 50px
 large-size = 150px
 radius-distance = 200px
+modifier = 0.8
 
 body
   padding 0
@@ -24,14 +25,16 @@ body
     height small-size
     width small-size
     margin-top -(small-size / 2)
+    margin-left -(small-size / 2)
 
   &.large
     height large-size
     width large-size
     margin-top -(large-size / 2)
+    margin-left -(large-size / 2)
 
   &:not(.center)
     for i in (2..7)
       &:nth-child({i})
-        transform translate3d(sin(60deg * (i - 1)) * radius-distance + (radius-distance / 2), cos(60deg * (i - 1)) * radius-distance, 0)
+        transform translate3d(sin(60deg * (i - 1)) * radius-distance * modifier + (radius-distance), cos(60deg * (i - 1)) * radius-distance * modifier, 0)
 
