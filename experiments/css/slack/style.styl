@@ -1,3 +1,62 @@
+area-size = 500px
+collapsed-stripe-size = 75px
+opacity = 0.5
+
 body
   margin 0
   padding 0
+  padding-top 50vh
+
+.area
+  width area-size
+  height area-size
+  margin -(area-size / 2) auto 0
+  position relative
+
+.lane
+  width area-size
+  height collapsed-stripe-size
+  position absolute
+  top (area-size / 2 - collapsed-stripe-size / 2)
+  left 0
+
+  for i in (1..4)
+    &:nth-child({i})
+      transform translate3d(0, (area-size / 2 - collapsed-stripe-size), 0) rotate(80deg + i * 90deg)
+      transform-origin 50% (-(area-size / 2 - collapsed-stripe-size * 2))
+
+  .stripe
+    position absolute
+    top 0
+    left 0
+    width collapsed-stripe-size
+    height 100%
+    animation slide 0.9s linear infinite
+    border-radius collapsed-stripe-size
+
+  .blue
+    background-color hsla(200deg, 100, 50, opacity)
+
+  .green
+    background-color hsla(160deg, 100, 50, opacity)
+
+  .red
+    background-color hsla(340deg, 100, 50, opacity)
+
+  .yellow
+    background-color hsla(40deg, 100, 60, opacity)
+
+@keyframes slide
+  from
+    width collapsed-stripe-size
+
+  33%
+    width area-size
+    left 0
+
+  67%
+    width collapsed-stripe-size
+    left area-size - collapsed-stripe-size
+
+  to
+    left 0

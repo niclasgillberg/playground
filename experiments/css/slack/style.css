@@ -1,4 +1,100 @@
 body {
   margin: 0;
   padding: 0;
+  padding-top: 50vh;
+}
+.area {
+  width: 500px;
+  height: 500px;
+  margin: -250px auto 0;
+  position: relative;
+}
+.lane {
+  width: 500px;
+  height: 75px;
+  position: absolute;
+  top: 212.5px;
+  left: 0;
+}
+.lane:nth-child(1) {
+  -webkit-transform: translate3d(0, 175px, 0) rotate(170deg);
+          transform: translate3d(0, 175px, 0) rotate(170deg);
+  -webkit-transform-origin: 50% -100px;
+      -ms-transform-origin: 50% -100px;
+          transform-origin: 50% -100px;
+}
+.lane:nth-child(2) {
+  -webkit-transform: translate3d(0, 175px, 0) rotate(260deg);
+          transform: translate3d(0, 175px, 0) rotate(260deg);
+  -webkit-transform-origin: 50% -100px;
+      -ms-transform-origin: 50% -100px;
+          transform-origin: 50% -100px;
+}
+.lane:nth-child(3) {
+  -webkit-transform: translate3d(0, 175px, 0) rotate(350deg);
+          transform: translate3d(0, 175px, 0) rotate(350deg);
+  -webkit-transform-origin: 50% -100px;
+      -ms-transform-origin: 50% -100px;
+          transform-origin: 50% -100px;
+}
+.lane:nth-child(4) {
+  -webkit-transform: translate3d(0, 175px, 0) rotate(440deg);
+          transform: translate3d(0, 175px, 0) rotate(440deg);
+  -webkit-transform-origin: 50% -100px;
+      -ms-transform-origin: 50% -100px;
+          transform-origin: 50% -100px;
+}
+.lane .stripe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 75px;
+  height: 100%;
+  -webkit-animation: slide 0.9s linear infinite;
+          animation: slide 0.9s linear infinite;
+  border-radius: 75px;
+}
+.lane .blue {
+  background-color: rgba(0,170,255,0.5);
+}
+.lane .green {
+  background-color: rgba(0,255,170,0.5);
+}
+.lane .red {
+  background-color: rgba(255,0,85,0.5);
+}
+.lane .yellow {
+  background-color: rgba(255,187,51,0.5);
+}
+@-webkit-keyframes slide {
+  from {
+    width: 75px;
+  }
+  33% {
+    width: 500px;
+    left: 0;
+  }
+  67% {
+    width: 75px;
+    left: 425px;
+  }
+  to {
+    left: 0;
+  }
+}
+@keyframes slide {
+  from {
+    width: 75px;
+  }
+  33% {
+    width: 500px;
+    left: 0;
+  }
+  67% {
+    width: 75px;
+    left: 425px;
+  }
+  to {
+    left: 0;
+  }
 }

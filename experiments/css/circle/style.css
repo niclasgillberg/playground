@@ -4,12 +4,13 @@
 }
 body {
   background: #000;
+  padding-top: 50vh;
 }
 .circle {
   width: 400px;
   height: 400px;
   background: #f06d06;
-  margin: 50px auto;
+  margin: -200px auto 0;
   border-radius: 100%;
   position: relative;
 }
