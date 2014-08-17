@@ -1,6 +1,10 @@
-area-size = 500px
-collapsed-stripe-size = 75px
-opacity = 0.5
+area-size = 300px
+collapsed-stripe-size = 50px
+opacity = 0.7
+animation-time = 1s
+
+*
+  box-sizing border-box
 
 body
   margin 0
@@ -31,7 +35,7 @@ body
     left 0
     width collapsed-stripe-size
     height 100%
-    animation slide 0.9s linear infinite
+    animation slide animation-time linear infinite
     border-radius collapsed-stripe-size
 
   .blue
@@ -50,11 +54,11 @@ body
   from
     width collapsed-stripe-size
 
-  33%
+  35%
     width area-size
     left 0
 
-  67%
+  70%
     width collapsed-stripe-size
     left area-size - collapsed-stripe-size
 
